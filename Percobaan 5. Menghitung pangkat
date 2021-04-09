@@ -1,0 +1,31 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package percobaanrekursif;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author User
+ */
+public class Pangkat {
+    public static int pangkatRekursif(int x, int y){
+        if (y == 0)
+            return 1 ;
+        else return x * pangkatRekursif(x,y-1);
+    }
+    public static void main(String[] args) {
+        System.out.println("Bilangan x di pangkatkan y ");
+        Scanner input = new Scanner(System.in);
+        System.out.println("Bilangan x : ");
+        int x = input.nextInt();
+        
+        System.out.println("Bilangan y : ");
+        int y = input.nextInt();
+        
+        System.out.println(x + " pangkat " + y + " = " + pangkatRekursif(x, y));
+    }
+}
